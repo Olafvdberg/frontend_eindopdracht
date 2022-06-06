@@ -2,6 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
+import Page3 from './pages/Page3';
+import Page4 from './pages/Page4';
+import './App.css';
+
+import TopMenu from "./components/TopMenu";
 
 import {
     BrowserRouter as Router,
@@ -9,12 +16,13 @@ import {
     Route,
 } from "react-router-dom";
 
+
 function App() {
     return (
         <Router>
             <TopMenu/>
             <Switch>
-                <Route path="/">
+                <Route path="/HomePage">
                     <HomePage/>
                 </Route>
                 <Route path="/Page1">
@@ -28,9 +36,6 @@ function App() {
                 </Route>
                 <Route path="/Page4">
                     <Page4/>
-                </Route>
-                <Route path="/Page5">
-                    <Page5/>
                 </Route>
             </Switch>
         </Router>
